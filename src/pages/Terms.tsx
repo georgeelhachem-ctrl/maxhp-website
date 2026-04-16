@@ -1,6 +1,17 @@
+import { Helmet } from 'react-helmet-async'
+
 export default function Terms() {
   return (
     <div className="bg-white min-h-screen">
+      <Helmet>
+        <title>Terms of Service | MAX HP</title>
+        <meta name="description" content="Read MAX HP's Terms of Service governing your use of the platform, subscriptions, billing, and data." />
+        <meta property="og:title" content="Terms of Service | MAX HP" />
+        <meta property="og:description" content="Read MAX HP's Terms of Service governing your use of the platform, subscriptions, billing, and data." />
+        <meta property="og:url" content="https://maxhp.io/terms" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://maxhp.io/logo.svg" />
+      </Helmet>
       <div className="max-w-4xl mx-auto px-6 lg:px-8 py-20">
 
         {/* Header */}

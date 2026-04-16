@@ -1,6 +1,17 @@
+import { Helmet } from 'react-helmet-async'
+
 export default function Privacy() {
   return (
     <div className="bg-white min-h-screen">
+      <Helmet>
+        <title>Privacy Policy | MAX HP</title>
+        <meta name="description" content="Read MAX HP's Privacy Policy to understand how we collect, use, and protect your data." />
+        <meta property="og:title" content="Privacy Policy | MAX HP" />
+        <meta property="og:description" content="Read MAX HP's Privacy Policy to understand how we collect, use, and protect your data." />
+        <meta property="og:url" content="https://maxhp.io/privacy" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://maxhp.io/logo.svg" />
+      </Helmet>
       <div className="max-w-4xl mx-auto px-6 lg:px-8 py-20">
 
         {/* Header */}

@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async'
 import { useDemoModal } from '../context/DemoModalContext'
 
 const modules = [
@@ -134,6 +135,16 @@ export default function Features() {
 
   return (
     <>
+      <Helmet>
+        <title>Features | MAX HP Automotive Business Management Software</title>
+        <meta name="description" content="Explore MAX HP's full feature set — smart scheduling, client CRM, invoicing, employee management, marketing hub, AI receptionist, and more." />
+        <meta property="og:title" content="Features | MAX HP Automotive Business Management Software" />
+        <meta property="og:description" content="Explore MAX HP's full feature set — smart scheduling, client CRM, invoicing, employee management, marketing hub, AI receptionist, and more." />
+        <meta property="og:url" content="https://maxhp.io/features" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://maxhp.io/logo.svg" />
+      </Helmet>
+
       {/* ── HERO ─────────────────────────────────────────────────── */}
       <section className="bg-[#f7f9fb] pt-16 pb-16 border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">

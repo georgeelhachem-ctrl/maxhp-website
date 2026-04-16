@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Helmet } from 'react-helmet-async'
 import { useDemoModal } from '../context/DemoModalContext'
 
 const plans = [
@@ -130,6 +131,16 @@ export default function Pricing() {
 
   return (
     <>
+      <Helmet>
+        <title>Pricing | MAX HP — Starter $199, Pro $299, Pro + AI $799/mo</title>
+        <meta name="description" content="Simple, transparent pricing for automotive service businesses. 30-day free trial included. No hidden fees." />
+        <meta property="og:title" content="Pricing | MAX HP — Starter $199, Pro $299, Pro + AI $799/mo" />
+        <meta property="og:description" content="Simple, transparent pricing for automotive service businesses. 30-day free trial included. No hidden fees." />
+        <meta property="og:url" content="https://maxhp.io/pricing" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://maxhp.io/logo.svg" />
+      </Helmet>
+
       {/* ── HERO ─────────────────────────────────────────────────── */}
       <section className="bg-[#f7f9fb] pt-16 pb-16 border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">

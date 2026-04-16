@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 import { useDemoModal } from '../context/DemoModalContext'
 
 const bentoCards = [
@@ -71,8 +72,40 @@ const pricingPreview = [
 export default function Home() {
   const openDemo = useDemoModal()
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: 'MAX HP',
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Web',
+    url: 'https://maxhp.io',
+    description: 'All-in-one business management platform for automotive service businesses — scheduling, CRM, invoicing, marketing, employee management, and AI voice receptionist.',
+    offers: [
+      { '@type': 'Offer', name: 'Starter', price: '199', priceCurrency: 'USD', billingIncrement: 'P1M' },
+      { '@type': 'Offer', name: 'Pro', price: '299', priceCurrency: 'USD', billingIncrement: 'P1M' },
+      { '@type': 'Offer', name: 'Pro + AI', price: '799', priceCurrency: 'USD', billingIncrement: 'P1M' },
+    ],
+    provider: {
+      '@type': 'Organization',
+      name: 'MAX HP LLC',
+      url: 'https://maxhp.io',
+      contactPoint: { '@type': 'ContactPoint', email: 'sales@maxhp.io', contactType: 'sales' },
+    },
+  }
+
   return (
     <>
+      <Helmet>
+        <title>MAX HP | All-in-One Platform for Automotive Service Businesses</title>
+        <meta name="description" content="Run your entire shop from one screen. Scheduling, CRM, invoicing, marketing, and AI — built for auto detailers, tint shops, mechanics, and tire shops." />
+        <meta property="og:title" content="MAX HP | All-in-One Platform for Automotive Service Businesses" />
+        <meta property="og:description" content="Run your entire shop from one screen. Scheduling, CRM, invoicing, marketing, and AI — built for auto detailers, tint shops, mechanics, and tire shops." />
+        <meta property="og:url" content="https://maxhp.io/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://maxhp.io/logo.svg" />
+        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+      </Helmet>
+
       {/* ── HERO ─────────────────────────────────────────────────── */}
       <section className="bg-[#f7f9fb] pt-16 pb-0 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Helmet } from 'react-helmet-async'
 
 // ─── HUBSPOT SETUP ────────────────────────────────────────────────────────────
 // 1. In HubSpot → Marketing → Forms, create a new form for your contact page.
@@ -71,6 +72,16 @@ export default function Contact() {
 
   return (
     <>
+      <Helmet>
+        <title>Contact MAX HP | Book a Demo or Get Support</title>
+        <meta name="description" content="Have questions about MAX HP? Book a demo, reach our sales team, or get technical support. We respond within one business day." />
+        <meta property="og:title" content="Contact MAX HP | Book a Demo or Get Support" />
+        <meta property="og:description" content="Have questions about MAX HP? Book a demo, reach our sales team, or get technical support. We respond within one business day." />
+        <meta property="og:url" content="https://maxhp.io/contact" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://maxhp.io/logo.svg" />
+      </Helmet>
+
       {/* ── HERO ─────────────────────────────────────────────────── */}
       <section className="bg-[#f7f9fb] pt-16 pb-16 border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
